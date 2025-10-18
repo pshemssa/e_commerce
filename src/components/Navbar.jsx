@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 
-function Navbar({ currentPage, onNavigate }) {
+function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-const navLinks = [
+  const navLinks = [
     { name: 'Home', path: '/' },
     { name: 'Products', path: '/products' },
     { name: 'About', path: '/about' },
@@ -12,31 +13,32 @@ const navLinks = [
   ];
 
   return (
-    <nav className="bg-white">
+    <nav className="bg-cream-50 sticky top-0 z-50 shadow-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16 items-center">
-          <div
-            className="text-2xl font-bold cursor-pointer"
-            onClick={() => {
-              onNavigate && onNavigate('home');
-              setMobileMenuOpen(false);
-            }}
+          <NavLink
+            to="/"
+            className="text-2xl md:text-3xl font-montserrat font-bold text-slate-800 hover:text-coral-500 transition-colors duration-200"
+            onClick={() => setMobileMenuOpen(false)}
           >
             TechStyle Store
-          </div>
+          </NavLink>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-6">
             {navLinks.map((link) => (
-              <button
+              <NavLink
                 key={link.path}
-                onClick={() => onNavigate && onNavigate(link.path)}
-                className={`text-sm transition-colors ${
-                  currentPage === link.path? 'text-blue-400 font-semibold' : 'text-gray-700'
-                } hover:text-blue-400`}
+                to={link.path}
+                className={({ isActive }) =>
+                  `text-sm font-poppins font-medium transition-colors duration-200 ${
+                    isActive ? 'text-pink-400 font-semibold' : 'text-slate-800 hover:text-coral-500'
+                  }`
+                }
+                onClick={() => setMobileMenuOpen(false)}
               >
                 {link.name}
-              </button>
+              </NavLink>
             ))}
           </div>
 
@@ -44,36 +46,38 @@ const navLinks = [
           <div className="md:hidden">
             <button
               onClick={() => setMobileMenuOpen((v) => !v)}
-              aria-label="Toggle menu"
-              className="p-2"
+              aria-label="Toggle mobile menu"
+              className="p-2 text-slate-800 hover:text-coral-500 transition-colors duration-200"
             >
-              {mobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
+              {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
         </div>
       </div>
 
       {/* Mobile Navigation */}
-      {mobileMenuOpen && (
-        <div className="md:hidden bg-white border-t">
-          <div className="px-2 pt-2 pb-3 space-y-1">
-            {navLinks.map((link) => (
-              <button
-                key={link.path}
-                onClick={() => {
-                  onNavigate && onNavigate(link.path);
-                  setMobileMenuOpen(false);
-                }}
-                className={`block w-full text-left py-2 px-3 transition-colors ${
-                  currentPage === link.path ? 'text-blue-400 font-semibold' : 'text-gray-700'
-                } hover:text-blue-400`}
-              >
-                {link.name}
-              </button>
-            ))}
-          </div>
+      <div
+        className={`md:hidden bg-cream-50 border-t border-gray-100 overflow-hidden transition-all duration-300 ease-in-out ${
+          mobileMenuOpen ? 'max-h-64 opacity-100' : 'max-h-0 opacity-0'
+        }`}
+      >
+        <div className="px-4 pt-2 pb-3 space-y-2">
+          {navLinks.map((link) => (
+            <NavLink
+              key={link.path}
+              to={link.path}
+              className={({ isActive }) =>
+                `block w-full text-left py-2 px-3 text-sm font-poppins font-medium transition-colors duration-200 ${
+                  isActive ? 'text-pink-400 font-semibold' : 'text-slate-800 hover:text-coral-500'
+                }`
+              }
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              {link.name}
+            </NavLink>
+          ))}
         </div>
-      )}
+      </div>
     </nav>
   );
 }
