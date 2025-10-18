@@ -4,11 +4,11 @@ import { Menu, X } from 'lucide-react';
 function Navbar({ currentPage, onNavigate }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  const navLinks = [
-    { name: 'Home', page: 'home' },
-    { name: 'Products', page: 'products' },
-    { name: 'About', page: 'about' },
-    { name: 'Contact', page: 'contact' },
+const navLinks = [
+    { name: 'Home', path: '/' },
+    { name: 'Products', path: '/products' },
+    { name: 'About', path: '/about' },
+    { name: 'Contact', path: '/contact' },
   ];
 
   return (
@@ -29,10 +29,10 @@ function Navbar({ currentPage, onNavigate }) {
           <div className="hidden md:flex space-x-6">
             {navLinks.map((link) => (
               <button
-                key={link.page}
-                onClick={() => onNavigate && onNavigate(link.page)}
+                key={link.path}
+                onClick={() => onNavigate && onNavigate(link.path)}
                 className={`text-sm transition-colors ${
-                  currentPage === link.page ? 'text-blue-400 font-semibold' : 'text-gray-700'
+                  currentPage === link.path? 'text-blue-400 font-semibold' : 'text-gray-700'
                 } hover:text-blue-400`}
               >
                 {link.name}
@@ -59,13 +59,13 @@ function Navbar({ currentPage, onNavigate }) {
           <div className="px-2 pt-2 pb-3 space-y-1">
             {navLinks.map((link) => (
               <button
-                key={link.page}
+                key={link.path}
                 onClick={() => {
-                  onNavigate && onNavigate(link.page);
+                  onNavigate && onNavigate(link.path);
                   setMobileMenuOpen(false);
                 }}
                 className={`block w-full text-left py-2 px-3 transition-colors ${
-                  currentPage === link.page ? 'text-blue-400 font-semibold' : 'text-gray-700'
+                  currentPage === link.path ? 'text-blue-400 font-semibold' : 'text-gray-700'
                 } hover:text-blue-400`}
               >
                 {link.name}
