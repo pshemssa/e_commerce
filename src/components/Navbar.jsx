@@ -13,15 +13,15 @@ function Navbar() {
   ];
 
   return (
-    <nav className="bg-cream-50 sticky top-0 z-50 shadow-md">
+    <nav className="bg-blue-50 sticky top-0 z-50 shadow-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16 items-center">
           <NavLink
             to="/"
-            className="text-2xl md:text-3xl font-montserrat font-bold text-slate-800 hover:text-coral-500 transition-colors duration-200"
+            className="text-xl md:text-3xl"
             onClick={() => setMobileMenuOpen(false)}
           >
-            TechStyle Store
+            𝓣𝓔𝓒Ħ𝕊tyl𝕖 𝕊tor𝕖
           </NavLink>
 
           {/* Desktop Navigation */}

@@ -42,25 +42,25 @@ function ContactPage() {
   return (
     <div className="min-h-screen bg-cream-50 px-4 py-12 md:py-16">
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-2xl md:text-3xl font-montserrat font-semibold text-slate-800 mb-8 text-center">
+        <h2 className="text-2xl md:text-3xl text-pink-300 font-semibold  mb-8 text-center">
           Contact Us
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Contact Info Section */}
           <div>
-            <h3 className="text-xl font-montserrat font-semibold text-slate-800 mb-6">
+            <h3 className="text-xl font-montserrat font-semibold  mb-6">
               Get In Touch
             </h3>
             <ul className="space-y-6 text-slate-700">
               <li className="flex items-start gap-4">
                 <Mail className="w-6 h-6 text-pink-400" />
                 <div>
-                  <div className="font-medium text-slate-800">Email</div>
-                  <div className="text-sm hover:text-coral-500 transition-colors duration-200">
+                  <div className="font-medium ">Email</div>
+                  <div className="text-sm ">
                     <a href="mailto:support@techstylestore.com">support@techstylestore.com</a>
                   </div>
-                  <div className="text-sm hover:text-coral-500 transition-colors duration-200">
+                  <div className="text-sm">
                     <a href="mailto:sales@techstylestore.com">sales@techstylestore.com</a>
                   </div>
                 </div>
@@ -69,8 +69,8 @@ function ContactPage() {
                 <Phone className="w-6 h-6 text-pink-400" />
                 <div>
                   <div className="font-medium text-slate-800">Phone</div>
-                  <div className="text-sm">+250 788 123 456</div>
-                  <div className="text-sm">+250 788 654 321</div>
+                  <div className="text-sm">21178</div>
+                  <div className="text-sm">+250 781 196 712</div>
                 </div>
               </li>
               <li className="flex items-start gap-4">
@@ -78,7 +78,7 @@ function ContactPage() {
                 <div>
                   <div className="font-medium text-slate-800">Address</div>
                   <div className="text-sm">KG 123 St, Kigali</div>
-                  <div className="text-sm">Rwanda, East Africa</div>
+                  <div className="text-sm">Rwanda, Kacyiru</div>
                 </div>
               </li>
             </ul>
