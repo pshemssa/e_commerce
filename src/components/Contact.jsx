@@ -99,14 +99,14 @@ function ContactPage() {
                   value={formData.name}
                   onChange={handleChange}
                   className={`w-full px-4 py-2 rounded-lg border border-gray-100 focus:border-pink-400 focus:ring-2 focus:ring-pink-200 bg-white text-slate-800 placeholder-gray-400 transition-all duration-200 ${
-                    errors.name ? 'border-coral-500' : ''
+                    errors.name ? 'border-coral-500 ' : ''
                   }`}
                   placeholder="Your name"
                   aria-invalid={errors.name ? 'true' : 'false'}
                   aria-describedby={errors.name ? 'name-error' : undefined}
                 />
                 {errors.name && (
-                  <p id="name-error" className="text-sm text-coral-500 mt-1">
+                  <p id="name-error" className="text-sm text-orange-400 mt-1">
                     {errors.name}
                   </p>
                 )}
@@ -128,7 +128,7 @@ function ContactPage() {
                   aria-describedby={errors.email ? 'email-error' : undefined}
                 />
                 {errors.email && (
-                  <p id="email-error" className="text-sm text-coral-500 mt-1">
+                  <p id="email-error" className="text-sm text-orange-400 mt-1">
                     {errors.email}
                   </p>
                 )}
@@ -149,7 +149,7 @@ function ContactPage() {
                   aria-describedby={errors.message ? 'message-error' : undefined}
                 />
                 {errors.message && (
-                  <p id="message-error" className="text-sm text-coral-500 mt-1">
+                  <p id="message-error" className="text-sm text-orange-400 mt-1">
                     {errors.message}
                   </p>
                 )}
