@@ -27,3 +27,6 @@ cd techstyle-store
 npm install
 
 npm run dev
+
+OR RUN HOSTED VERSION AT :
+https://techstyl1.netlify.app/
