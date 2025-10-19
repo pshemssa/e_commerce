@@ -9,6 +9,8 @@ import ContactPage from './components/Contact';
 
 function App() {
   const handleAddToCart = (product) => {
+    alert('do you want to add it to cart?');
+    
     console.log(`Added ${product.name} to cart`);
     alert(`${product.name} has been added to your cart!`);
   };

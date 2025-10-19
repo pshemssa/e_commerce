@@ -6,7 +6,6 @@ function HeroSection({ onShopNow }) {
   const navigate = useNavigate(); // For React Router navigation
 
   const handleShopNow = () => {
-    if (onShopNow) onShopNow(); // Call optional prop if provided
     navigate('/products'); // Navigate to products page
   };
 

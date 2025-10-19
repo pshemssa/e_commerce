@@ -2,7 +2,7 @@ import React from 'react';
 
 function Footer() {
   return (
-    <footer className="bg-gray-100 text-gray-700">
+    <footer className="bg-gray-100 text-gray-700 ">
         <div className="max-w-7xl mx-auto px-4 py-10 grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <h3 className="text-2xl font-bold">TechStyle Store</h3>
@@ -29,9 +29,9 @@ function Footer() {
             </ul>
           </div>
         </div>
-
-        <div className="border-t bg-gray-50 text-center py-4 text-sm">
-          &copy; 2025 TechStyle Store. All rights reserved.
+        <hr/>
+        <div className=" text-center py-4 text-sm ">
+         © 2025 TechStyle Store. All rights reserved.
         </div>
       </footer>
   );
