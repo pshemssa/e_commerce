@@ -53,6 +53,7 @@ export const products = [
     name: 'Camera Lens',
     price: 299.99,
     category: 'Electronics',
-    image: 'https://images.unsplash.com/photo-1606980623516-5a2f891bffbe?w=400&h=400&fit=crop'
-  }
+    image: '/images/lens.png'
+  },
+ 
 ];
