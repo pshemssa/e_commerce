@@ -8,7 +8,6 @@ function ProductCard({ product, onAddToCart }) {
         src={product.image}
         alt={product.name}
         className="w-full h-40 object-cover rounded-md mb-4"
-        loading="lazy"
       />
       <div className="text-xs font-poppins text-slate-700">{product.category}</div>
       <h3 className="text-lg font-montserrat font-semibold text-slate-800 mt-1 line-clamp-2">
