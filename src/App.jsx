@@ -9,12 +9,14 @@ import ContactPage from './components/Contact';
 
 function App() {
   const handleAddToCart = (product) => {
-    alert('do you want to add it to cart?');
-    
+    const userConfirmed = confirm(`do you want to add ${product.name} it to cart?`); 
+    if(userConfirmed){
     console.log(`Added ${product.name} to cart`);
-    alert(`${product.name} has been added to your cart!`);
-  };
-
+    alert(`${product.name} has been added to your cart!`) }
+   else{
+       alert(`${product.name} has not been added to your cart!`) };
+    }
+  
   return (
     <Router>
       <div className="min-h-screen flex flex-col">
