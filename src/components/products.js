@@ -43,7 +43,7 @@ export const products = [
   },
   {
     id: 7,
-    name: 'Bluetooth Speaker',
+    name: 'JBL Speaker',
     price: 59.99,
     category: 'Electronics',
     image: 'https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=400&h=400&fit=crop'
