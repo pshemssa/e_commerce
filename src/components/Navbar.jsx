@@ -31,7 +31,7 @@ function Navbar() {
                 key={link.path}
                 to={link.path}
                 className={({ isActive }) =>
-                  `text-sm font-poppins font-medium transition-colors duration-200 ${
+                  `text-sm  font-medium ${
                     isActive ? 'text-pink-400 font-semibold' : 'text-slate-800 hover:text-coral-500'
                   }`
                 }
@@ -47,7 +47,7 @@ function Navbar() {
             <button
               onClick={() => setMobileMenuOpen((v) => !v)}
               aria-label="Toggle mobile menu"
-              className="p-2 text-slate-800 hover:text-coral-500 transition-colors duration-200"
+              className="p-2 text-slate-800 hover:text-coral-500 "
             >
               {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
